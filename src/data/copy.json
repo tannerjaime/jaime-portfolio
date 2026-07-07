@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "asdf",
+    "description": "Description tk."
+  },
+  "body": [
+    {
+      "section": "intro",
+      "content": [
+        {
+          "type": "h4",
+          "value": "An h4 element with no attributes"
+        },
+        {
+          "type": "text",
+          "value": "Some random text here, followed by an img tag."
+        },
+        {
+          "type": "Test",
+          "value": {
+            "label": "I’m a custom component!",
+            "value": "50"
+          }
+        }
+      ]
+    }
+  ]
+}
