@@ -1,6 +1,7 @@
 <script>
 	// shadow, plain, line, bubble
 	import wordmark from "$svg/wordmark-script-stacked-plain.svg";
+	import NavigationMenu from "./ui/NavigationMenu.svelte";
 </script>
 
 <header>
@@ -9,6 +10,7 @@
 			>{@html wordmark}</a
 		>
 	</div>
+	<NavigationMenu/>
 </header>
 
 <style>

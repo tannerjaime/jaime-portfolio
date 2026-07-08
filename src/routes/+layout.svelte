@@ -1,11 +1,11 @@
 <script>
 	import "$styles/app.css";
-	import Header from "$components/Header.svelte";
+	import Nav from "$components/Project/Nav.svelte";
 
 	let { children } = $props();
 </script>
 
-<Header />
+<Nav />
 <main id="content">
 	{@render children?.()}
 </main>
