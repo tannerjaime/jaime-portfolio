@@ -19,16 +19,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 2.5rem;
-    background: #f4f4f3;
+    padding: 2rem 8rem;
+    background: #F9F9F7;
   }
 
   .logo {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: "Mozilla Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
     font-size: 1.4rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #1a1a1a;
+    color: #333331;
     text-decoration: none;
   }
 
@@ -41,11 +44,14 @@
   }
 
   li a {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 0.85rem;
+    font-family: "Mozilla Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #1a1a1a;
+    color: #333331;
     text-decoration: none;
   }
 

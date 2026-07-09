@@ -14,78 +14,97 @@
 </script>
 
 <section>
-  <div class="text-block">
-    {#each textLines as line, i}
-      <span>{line}</span>
-      {#if i < textLines.length - 1}
-        <br />
+  <div class="content-stack">
+    <div class="text-block">
+      {#each textLines as line, i}
+        <span>{line}</span>
+        {#if i < textLines.length - 1}
+          <br />
+        {/if}
+      {/each}
+    </div>
+
+    <div class="media-block">
+      {#if image}
+        <img src={image} {alt} />
       {/if}
-    {/each}
+      {#if video}
+        <video
+          src={video}
+          {poster}
+          autoplay={autoplay}
+          loop={loop}
+          muted={muted}
+          {controls}
+          playsinline
+        >
+          <track kind="captions" />
+        </video>
+      {/if}
+    </div>
   </div>
-  {#if image}
-    <img src={image} {alt} />
-  {/if}
-  {#if video}
-    <video
-      src={video}
-      {poster}
-      autoplay={autoplay}
-      loop={loop}
-      muted={muted}
-      {controls}
-      playsinline
-    >
-      <track kind="captions" />
-    </video>
-  {/if}
 </section>
 
 <style>
   section {
+    background: #F9F9F7;
+    padding: 4rem 8rem 8rem;
+  }
+
+  .content-stack {
     display: flex;
-    align-items: flex-start;
-    gap: 3rem;
-    background: #f4f4f3;
-    padding: 1rem 2.5rem 5rem;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
   }
  
   .text-block {
-    flex: 1 1 0;
-    max-width: 68ch;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .media-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   span {
     display: block;
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 2.75rem;
+    font-family: "Mozilla Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
     line-height: 1.25;
-    color: #1a1a1a;
+    color: #333331;
     margin: 0;
   }
  
+  img,
   video {
-    flex: 0 0 clamp(180px, 26vw, 320px);
-    width: clamp(180px, 26vw, 320px);
+    width: 100%;
     height: auto;
+    max-width: 100%;
     object-fit: cover;
     display: block;
   }
  
   @media (max-width: 900px) {
     section {
-      flex-direction: column-reverse;
       gap: 2rem;
     }
- 
-    video {
+
+    .media-block {
       width: 100%;
-      flex-basis: auto;
     }
   }
  
   @media (max-width: 640px) {
     section {
-      padding: 0.5rem 1.5rem 3rem;
+      padding: 1.25rem 1.75rem 3rem;
     }
  
     span {

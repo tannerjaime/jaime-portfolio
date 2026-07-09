@@ -36,6 +36,9 @@
 	<meta name="robots" content="max-image-preview:large" />
 
 	<link rel="canonical" href="{url}/" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap" rel="stylesheet">
 
 	{#each preloadFont as href}
 		<link rel="preload" {href} as="font" type="font/woff2" crossorigin />
