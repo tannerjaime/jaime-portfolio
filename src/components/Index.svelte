@@ -6,10 +6,11 @@
 
 	const copy = getContext("copy");
 	// const data = getContext("data");
+
+	const about = copy?.body?.[0]?.content?.find((item) => item.type === "About")?.value ?? {};
 </script>
 
-
 <svelte:boundary onerror={(e) => console.error(e)}>
-	<About/>
+	<About {about} />
 	<!-- <Footer recirc={true} /> -->
 </svelte:boundary>

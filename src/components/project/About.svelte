@@ -1,19 +1,27 @@
 <script>
-  const {
-    text = 'Jaime Tanner is a designer & developer currently working at The New York Times as their first Accessibility Visuals Editor.',
-    image = '',
-    alt = '',
-    video = '/assets/project/aquarium.MOV',
-    poster = '',
-    autoplay = true,
-    loop = true,
-    muted = true,
-    controls = false
-  } = $props();
+  let { about = {} } = $props();
+
+  let text = $derived(about?.text ?? 'no text');
+  let image = $derived(about?.image ?? '');
+  let alt = $derived(about?.alt ?? '');
+  let video = $derived(about?.video ?? '');
+  let poster = $derived(about?.poster ?? '');
+  let autoplay = $derived(about?.autoplay ?? true);
+  let loop = $derived(about?.loop ?? true);
+  let muted = $derived(about?.muted ?? true);
+  let controls = $derived(about?.controls ?? false);
+  let textLines = $derived(text.split('\n'));
 </script>
 
 <section>
-  <p>{text}</p>
+  <div class="text-block">
+    {#each textLines as line, i}
+      <span>{line}</span>
+      {#if i < textLines.length - 1}
+        <br />
+      {/if}
+    {/each}
+  </div>
   {#if image}
     <img src={image} {alt} />
   {/if}
@@ -41,9 +49,13 @@
     padding: 1rem 2.5rem 5rem;
   }
  
-  p {
+  .text-block {
     flex: 1 1 0;
     max-width: 68ch;
+  }
+
+  span {
+    display: block;
     font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 2.75rem;
     line-height: 1.25;
@@ -76,7 +88,7 @@
       padding: 0.5rem 1.5rem 3rem;
     }
  
-    p {
+    span {
       font-size: 1.6rem;
     }
   }

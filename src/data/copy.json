@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "asdf",
-    "description": "Description tk."
+    "title": "Jaime Tanner Portfolio Page",
+    "description": "Jaime’s homepage on the web."
   },
   "body": [
     {
@@ -16,10 +16,10 @@
           "value": "Some random text here, followed by an img tag."
         },
         {
-          "type": "Test",
+          "type": "About",
           "value": {
-            "label": "I’m a custom component!",
-            "value": "50"
+            "video": "/assets/project/aquarium.MOV",
+            "text": "Jaime Tanner is a designer & developer currently working at The New York Times as their first Accessibility Visuals Editor. \r\n\r\n\r\nShe’s living, working and raising her sweet baby in San Francisco. \r\n\r\n\r\nFormerly with Visa, the Institute of International Education, The Trevor Project, the Center for Data Arts, and the Burke-Cornell Medical Research Institute."
           }
         }
       ]
