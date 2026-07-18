@@ -9,3 +9,10 @@
 <main id="content">
 	{@render children?.()}
 </main>
+
+<style>
+	main {
+		/* background: #F9F9F7; */
+    	margin: 1rem 18rem;
+	}
+</style>

@@ -1,16 +1,19 @@
 <script>
-  let { name = 'Jaime Tanner', links = [
-    { label: 'About', href: '/about' },
-    { label: 'Projects', href: '/projects' }
-  ] } = $props();
+  // let { name = 'Jaime Tanner', links = [
+  //   { label: 'About', href: '/about' },
+  //   { label: 'Projects', href: '/projects' }
+  // ] } = $props();
+  let { name = 'Jaime Tanner', links= [] } = $props();
 </script>
 
 <nav>
   <a class="logo" href="/">{name}</a>
   <ul>
-    {#each links as link}
-      <li><a href={link.href}>{link.label}</a></li>
-    {/each}
+    {#if links}
+      {#each links as link}
+        <li><a href={link.href}>{link.label}</a></li>
+      {/each}
+    {/if}
   </ul>
 </nav>
 
@@ -19,8 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 8rem;
-    background: #F9F9F7;
+    padding: 3rem 18rem 0;
   }
 
   .logo {
@@ -28,9 +30,9 @@
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-size: 1.4rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1.25;
+    /* text-transform: uppercase; */
     color: #333331;
     text-decoration: none;
   }
@@ -46,10 +48,10 @@
   li a {
     font-family: "Mozilla Text", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
     font-size: 1rem;
-    letter-spacing: 0.1em;
+    line-height: 1.25;
     text-transform: uppercase;
     color: #333331;
     text-decoration: none;

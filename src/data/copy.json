@@ -19,7 +19,25 @@
           "type": "About",
           "value": {
             "video": "/assets/project/aquarium.MOV",
-            "text": "I’m a designer & developer currently working at The New York Times as their first Accessibility Visuals Editor. Formerly with Visa, the Institute of International Education, The Trevor Project, the Center for Data Arts, and the Burke-Cornell Research Institute. \r\nLiving, working and raising her sweet baby in the heart of San Francisco ♥"
+            "text": "Designer & developer most interested in data graphics and accessibility. Lucky enough to work at the intersection of both as The New York Times’ first Accessibility Visuals Editor."
+          }
+        },
+        {
+          "type": "IndexTable",
+          "value": {
+            "title": "Accessibility",
+            "items": [
+              {
+                "text": "Alt Text at the NYT",
+                "href": "http://google.com/",
+                "meta": "26"
+              },
+              {
+                "text": "Alt Text at the NYT",
+                "href": "http://google.com/",
+                "meta": "30"
+              }
+            ]
           }
         }
       ]
