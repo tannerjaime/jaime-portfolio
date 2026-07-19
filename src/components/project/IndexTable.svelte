@@ -2,13 +2,16 @@
   const props = $props();
 
   /** @type {string} */
-  let title = props.title ?? '';
+  let title = $derived(props.title ?? '');
 
   /** @type {ListItem[]} */
-  let items = props.items ?? [];
-  console.log('items:', items);
+  let items = $derived(props.items ?? []);
 
-  let ordered = props.ordered ?? false;
+  let ordered = $derived(props.ordered ?? false);
+  let showAll = $state(false);
+
+  let visibleItems = $derived(showAll ? items : items.slice(0, 3));
+  let hasMore = $derived(items.length > 3);
 </script>
 
 <section class="index-section">
@@ -17,7 +20,7 @@
   </h2>
 
   <svelte:element this={ordered ? 'ol' : 'ul'}>
-    {#each items as item, i}
+    {#each visibleItems as item, i}
       <li>
         {#if item.href}
           <a href={item.href}>{item.text}</a>
@@ -30,6 +33,12 @@
       </li>
     {/each}
   </svelte:element>
+
+  {#if hasMore}
+    <button type="button" class="toggle" onclick={() => (showAll = !showAll)}>
+      {showAll ? 'Show less' : `[Show ${items.length - 3} more]`}
+    </button>
+  {/if}
 </section>
 
 <style>
@@ -49,13 +58,6 @@
   h2 {
     font-size: 1rem;
     font-weight: 600;
-  }
-
-  h2 sup {
-    font-size: 0.7em;
-    font-weight: 400;
-    color: #888;
-    margin-left: 0.15em;
   }
 
   ul,
@@ -80,14 +82,14 @@
   li .text {
     color: #111;
     text-decoration: none;
-    flex: 1 1 auto;
     min-width: 0;
   }
 
   li a {
     position: relative;
-    display: inline-block;
-    /* transition: background-color 0.05s ease, color 0.05s ease; */
+    text-decoration: underline;
+    flex: 0 1 auto;
+    align-self: flex-start;
   }
 
   li a:hover {
@@ -100,5 +102,38 @@
     color: #888;
     /* font-size: 0.85rem; */
     white-space: nowrap;
+  }
+
+  .toggle {
+    margin-top: 0.5rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #111;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 760px) {
+    .index-section {
+      padding: 0.75rem 0;
+    }
+
+    li {
+      gap: 0.75rem;
+      padding: 0.35rem 0;
+    }
+
+    .toggle {
+      margin-top: 0.35rem;
+    }
+  }
+
+  .toggle:hover {
+    color: #F9F9F7;
+    background-color: #111;
   }
 </style>

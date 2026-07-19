@@ -23,6 +23,10 @@
     padding: 0 0 1rem;
   }
 
+  section {
+    width: 100%;
+  }
+
   span {
     display: block;
     font-family: "Mozilla Text", sans-serif;
@@ -36,18 +40,19 @@
   }
  
   @media (max-width: 900px) {
-    section {
-      gap: 2rem;
+    .text-block {
+      padding: 0 0 0.75rem;
     }
   }
  
   @media (max-width: 640px) {
-    section {
-      padding: 1.25rem 1.75rem 3rem;
+    .text-block {
+      padding: 0 0 0.5rem;
     }
  
     span {
-      font-size: 1.6rem;
+      font-size: 1.1rem;
+      line-height: 1.35;
     }
   }
 </style>

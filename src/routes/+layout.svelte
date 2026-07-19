@@ -12,7 +12,24 @@
 
 <style>
 	main {
-		/* background: #F9F9F7; */
-    	margin: 1rem 18rem;
+		margin: 1rem 18rem;
+	}
+
+	@media (max-width: 1400px) {
+		main {
+			margin: 1rem 17rem;
+		}
+	}
+
+	@media (max-width: 1100px) {
+		main {
+			margin: 1rem 4rem;
+		}
+	}
+
+	@media (max-width: 760px) {
+		main {
+			margin: 1rem 1.5rem;
+		}
 	}
 </style>

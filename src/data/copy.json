@@ -19,23 +19,172 @@
           "type": "About",
           "value": {
             "video": "/assets/project/aquarium.MOV",
-            "text": "Designer & developer most interested in data graphics and accessibility. Lucky enough to work at the intersection of both as The New York Times’ first Accessibility Visuals Editor."
+            "text": "Designer & developer most interested in data graphics and accessibility. Lucky enough to work at the intersection of both as The New York Times’ first Accessibility Visuals Editor. Email"
           }
         },
         {
           "type": "IndexTable",
           "value": {
-            "title": "Accessibility",
+            "title": "Interviews",
+            "items": [
+              {
+                "text": "An Editor Who Makes Times Visuals Accessible to All",
+                "href": "https://www.nytimes.com/2024/03/24/insider/an-editor-who-makes-times-visuals-accessible-to-all.html",
+                "meta": "The New York Times"
+              },
+              {
+                "text": "Making Visual Accessibility Part of Your Data Viz Practice",
+                "href": "https://nightingaledvs.com/visual-accessibility-data-journalism/",
+                "meta": "Nightingale"
+              },
+              {
+                "text": "Blind News Audiences Are Being Left Behind in the Data Visualisation Revolution",
+                "href": "https://reutersinstitute.politics.ox.ac.uk/blind-news-audiences-are-being-left-behind-data-visualisation-revolution-heres-how-we-fix",
+                "meta": "Reuters Institute"
+              },
+              {
+                "text": "Jaime Tanner Joins as Accessibility Visuals Editor",
+                "href": "https:https://www.nytco.com/press/jaime-tanner-joins-as-accessibility-visuals-editor/",
+                "meta": "NYT Co"
+              },
+              {
+                "text": "Alumni Profile",
+                "href": "https://www.newschool.edu/parsons/profile/jaime-tanner-institute-of-international-education/",
+                "meta": "Parsons Blog"
+              }
+            ]
+          }
+        },
+        {
+          "type": "IndexTable",
+          "value": {
+            "title": "Talks/Teaching",
+            "items": [
+              {
+                "text": "How To Get Your Newsroom To Care About Alt Text And Accessibility, ONA",
+                "href": "https://ona23.journalists.org/sessions/alt-text-and-accessibility/",
+                "meta": "Talk"
+              },
+              {
+                "text": "Alt Text and Accessibility, ONA",
+                "href": "https://ona23.journalists.org/sessions/table-talks-alt-text/",
+                "meta": "Talk"
+              },
+              {
+                "text": "Vis x Accessibility, IEEE",
+                "href": "https://ieeevis.org/year/2022/info/visinpractice",
+                "meta": "Talk"
+              },
+              {
+                "text": "Fundamentals of Data Visualization, Parsons School of Design",
+                "href": "https://www.youtube.com/watch?v=j62K0lya3ng&list=PLWhTJDazgMDkto7Zg6PEOzARaAORLJ_RC&index=3",
+                "meta": "Teaching"
+              },
+              {
+                "text": "Returning Panelist for Data Visualization and Communication Masters Thesis Presentations, MICA",
+                "href": "https://www.mica.edu/academics/graduate-programs/data-visualization-and-communication-mps/",
+                "meta": "Guest Lecturer"
+              },
+              {
+                "text": "Data Visualization and Design, Columbia University",
+                "href": "",
+                "meta": "Teaching Assistant"
+              },
+              {
+                "text": "Ethnography, Data & Healthcare Innovation, Parsons School of Design",
+                "href": "",
+                "meta": "Guest Lecturer"
+              },
+              {
+                "text": "Panorama: Surveillance in NY and Beijing, Central Academy of Fine Arts",
+                "href": "",
+                "meta": "Talk"
+              },
+              {
+                "text": "Species Bias in Conservation Research, Visualized Conf",
+                "href": "",
+                "meta": "Talk"
+              },
+              {
+                "text": "Pharmacological inhibition of histone deacetylase-6 as a treatment for spinal cord injury, SfN",
+                "href": "",
+                "meta": "Talk"
+              },
+              {
+                "text": "Careers in Research Panel Discussion, The New School for Social Research",
+                "href": "",
+                "meta": "Talk"
+              }
+            ]
+          }
+        },
+        {
+          "type": "IndexTable",
+          "value": {
+            "title": "Sample Projects",
             "items": [
               {
                 "text": "Alt Text at the NYT",
-                "href": "http://google.com/",
-                "meta": "26"
+                "href": "",
+                "meta": "Standards"
               },
               {
-                "text": "Alt Text at the NYT",
-                "href": "http://google.com/",
-                "meta": "30"
+                "text": "Visa Chart Components",
+                "href": "https://developer.visa.com/pages/chart-components",
+                "meta": "Development, Design"
+              },
+              {
+                "text": "Visa Analytics Platform",
+                "href": "https://www.visa.com/en-us/products/visa-analytics-platform",
+                "meta": "Development"
+              },
+              {
+                "text": "Visa Destination Insights",
+                "href": "https://www.visa.com/en-us/products/visa-destination-insights",
+                "meta": "Design, Research"
+              },
+              {
+                "text": "Data viz and accessibility recommendations to the City of San Francisco",
+                "href": "https://sfdigitalservices.gitbook.io/data-visualization-guide",
+                "meta": "Consulting"
+              }
+            ]
+          }
+        },
+        {
+          "type": "IndexTable",
+          "value": {
+            "title": "Previous Work",
+            "items": [
+              {
+                "text": "Accessibility Visuals Editor, The New York Times",
+                "href": "",
+                "meta": "2022 - now"
+              },
+              {
+                "text": "Staff Data Experience Design Engineer, Visa",
+                "href": "",
+                "meta": "2018 - 2022"
+              },
+              {
+                "text": "Data Visualization Specialist, IIE",
+                "href": "",
+                "meta": "2017 - 2018"
+              },
+              {
+                "text": "Creative Researcher and Developer, Center for Data Arts",
+                "href": "",
+                "meta": "2016 - 2017"
+              },
+              {
+                "text": "Research Assistant, Parsons School of Design",
+                "href": "",
+                "meta": "2016"
+              },
+              {
+                "text": "Research Technician, Burke Medical Research Institute",
+                "href": "",
+                "meta": "2012 - 2015"
               }
             ]
           }

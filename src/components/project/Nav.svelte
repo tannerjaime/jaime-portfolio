@@ -22,7 +22,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem 18rem 0;
+    margin: 1rem 18rem;
+  }
+
+  @media (max-width: 1400px) {
+    nav {
+      margin: 1rem 17rem;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    nav {
+      margin: 1rem 4rem;
+    }
   }
 
   .logo {
@@ -62,12 +74,12 @@
     opacity: 0.6;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 760px) {
     nav {
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
-      padding: 1.5rem;
+      margin: 1rem 1.5rem;
     }
 
     ul {
