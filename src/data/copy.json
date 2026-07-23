@@ -18,8 +18,9 @@
         {
           "type": "About",
           "value": {
+            "title": "Jaime Tanner",
             "video": "/assets/project/aquarium.MOV",
-            "text": "Designer & developer most interested in data graphics and accessibility. Lucky enough to work at the intersection of both as The New York Times’ first Accessibility Visuals Editor. Email"
+            "text": "Designer & developer most interested in data graphics and accessibility. Lucky enough to work at the intersection of both as The New York Times’ first Accessibility Visuals Editor."
           }
         },
         {
@@ -140,7 +141,7 @@
               },
               {
                 "text": "Visa Destination Insights",
-                "href": "https://www.visa.com/en-us/products/visa-destination-insights",
+                "href": "/projects/visa-destination-insights",
                 "meta": "Design, Research"
               },
               {

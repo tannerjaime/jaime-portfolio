@@ -1,19 +1,22 @@
 <script>
   let { about = {} } = $props();
 
+  let title = $derived(about?.title ?? 'No title');
   let text = $derived(about?.text ?? 'no text');
   let textLines = $derived(text.split('\n'));
 </script>
 
 <section>
-    <div class="text-block">
-      {#each textLines as line, i}
-        <span>{line}</span>
-        {#if i < textLines.length - 1}
-          <br />
-        {/if}
-      {/each}
-    </div>
+  <h1>{title}</h1>
+
+  <div class="text-block">
+    {#each textLines as line, i}
+      <span>{line}</span>
+      {#if i < textLines.length - 1}
+        <br />
+      {/if}
+    {/each}
+  </div>
 </section>
 
 <style>
@@ -25,6 +28,18 @@
 
   section {
     width: 100%;
+  }
+
+  h1 {
+    /* margin: 0 auto;
+    padding: 1rem 0; */
+    font-family: "Mozilla Text", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #333331;
   }
 
   span {
