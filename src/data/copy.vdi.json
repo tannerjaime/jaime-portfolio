@@ -8,32 +8,39 @@
       "section": "intro",
       "content": [
         {
-          "type": "h4",
-          "value": "An h4 element with no attributes"
-        },
-        {
-          "type": "text",
-          "value": "Some random text here, followed by an img tag."
-        },
-        {
-          "type": "text",
-          "value": "Some random text here, followed by an img tag."
-        },
-        {
-          "type": "text",
-          "value": "Some random text here, followed by an img tag."
-        },
-        {
           "type": "ProjectHed",
           "value": {
             "title": "Visa Destinations Insights",
-            "subtitle": "An overview",
-            "textLines": "",
+            "subtitle": "An overview"
+          }
+        },
+        {
+          "type": "text",
+          "value": "Some random text here, followed by an img tag."
+        },
+        {
+          "type": "text",
+          "value": "Some random text here, followed by an img tag."
+        },
+        {
+          "type": "Image",
+          "value": {
             "image": "/assets/project/VDI_homescreen.avif",
             "caption": "this is a caption",
-            "alt": "this is alt",
-            "text": "Designer & developer most interested in data graphics and accessibility. Lucky enough to work at the intersection of both as The New York Times’ first Accessibility Visuals Editor."
+            "alt": "this is alt"
           }
+        },
+        {
+          "type": "text",
+          "value": "Some random text here, followed by an img tag.Some random text here, followed by an img tag."
+        },
+        {
+          "type": "text",
+          "value": "Some random text here, followed by an img tag."
+        },
+        {
+          "type": "text",
+          "value": "Some random text here, followed by an img tag."
         }
       ]
     }

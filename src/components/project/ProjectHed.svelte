@@ -4,9 +4,6 @@
     title = projectHed?.title ?? '',
     subtitle = projectHed?.subtitle ?? '',
     textLines = projectHed?.textLines ?? [],
-    image = projectHed?.image ?? '',
-    caption = projectHed?.caption ?? '',
-    alt = projectHed?.alt ?? ''
   } = $props();
 
   let resolvedTextLines = $derived(
@@ -32,15 +29,6 @@
         {/if}
       {/each}
     </div>
-  {/if}
-
-  {#if image}
-    <figure>
-      <img src={image} {alt} />
-      {#if caption}
-        <figcaption>{caption}</figcaption>
-      {/if}
-    </figure>
   {/if}
 </section>
 
@@ -89,28 +77,6 @@
     margin: 0;
   }
 
-  figure {
-    margin: 0;
-    padding: 0 0 1rem;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-  }
-
-  figcaption {
-    margin-top: 0.5rem;
-    font-family: "Mozilla Text", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 0.9rem;
-    line-height: 1.25;
-    color: #666;
-  }
-
   @media (max-width: 900px) {
     .text-block {
       padding: 0 0 0.75rem;
@@ -125,10 +91,6 @@
     span {
       font-size: 1.1rem;
       line-height: 1.35;
-    }
-
-    figcaption {
-      font-size: 0.85rem;
     }
   }
 </style>
