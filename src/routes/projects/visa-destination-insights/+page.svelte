@@ -23,7 +23,7 @@
         {:else if item?.type === 'Image'}
           <Image allProps={item.value} />
         {:else}
-          <svelte:element this={item?.type || 'div'}>
+          <svelte:element this={item?.type==='text' ? 'p' : item?.type || 'p'}>
             {item?.value ?? ''}
           </svelte:element>
         {/if}
