@@ -2,7 +2,7 @@
   import { setContext } from 'svelte';
   import Meta from '$components/Meta.svelte';
   import ProjectHed from '$components/project/ProjectHed.svelte';
-  import copy from '$data/copy.json';
+  import copy from '$data/copy.vdi.json';
 
   const projectHed = copy?.body?.[0]?.content?.find((item) => item.type === 'projectHed')?.value ?? {};
   const title = 'Visa Destination Insights';
@@ -13,7 +13,22 @@
 </script>
 
 <Meta title={title} description={description} url={url} />
-<ProjectHed
+{#each copy?.body ?? [] as section}
+  <section data-section={section.section ?? 'content'}>
+    {#if Array.isArray(section.content)}
+      {#each section.content as item}
+        {#if item?.type === 'ProjectHed'}
+          <ProjectHed projectHed={item.value} />
+        {:else}
+          <svelte:element this={item?.type || 'div'}>
+            {item?.value ?? ''}
+          </svelte:element>
+        {/if}
+      {/each}
+    {/if}
+  </section>
+{/each}
+<!-- <ProjectHed
   projectHed={{
     title: 'Visa Destination Insights',
     subtitle: 'A project overview placeholder',
@@ -25,4 +40,4 @@
     caption: 'Placeholder media for the project header.',
     alt: 'Placeholder project visual'
   }}
-/>
+/> -->
