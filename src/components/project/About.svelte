@@ -31,25 +31,13 @@
   }
 
   h1 {
-    /* margin: 0 auto;
-    padding: 1rem 0; */
-    font-family: "Mozilla Text", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.25;
     color: #333331;
   }
 
   span {
     display: block;
-    font-family: "Mozilla Text", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Inter", sans-serif;
     font-size: 1rem;
-    line-height: 1.25;
     color: #333331;
     margin: 0;
   }
@@ -67,7 +55,7 @@
  
     span {
       font-size: 1.1rem;
-      line-height: 1.35;
+      /* line-height: 1.35; */
     }
   }
 </style>

@@ -1,5 +1,6 @@
 <script>
 	import "$styles/app.css";
+	import "$styles/fonts.css";
 	import Nav from "$components/Project/Nav.svelte";
 
 	let { children } = $props();

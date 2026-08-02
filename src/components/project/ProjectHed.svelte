@@ -51,10 +51,10 @@
   .subtitle {
     font-family: "Mozilla Text", sans-serif;
     font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
     font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.25;
+    /* line-height: 1.25; */
     color: #333331;
     margin: 0 0 0.75rem;
   }
@@ -67,12 +67,8 @@
 
   span {
     display: block;
-    font-family: "Mozilla Text", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Geist", sans-serif;
     font-size: 1rem;
-    line-height: 1.25;
     color: #333331;
     margin: 0;
   }

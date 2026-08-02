@@ -18,9 +18,9 @@
         {
           "type": "About",
           "value": {
-            "title": "",
+            "title": "Jaime Tanner",
             "video": "/assets/project/aquarium.MOV",
-            "text": "Designer & developer most interested in data graphics and accessibility. Lucky enough to work at the intersection of both as The New York Times’ first Accessibility Visuals Editor."
+            "text": "Designer & developer. Excited about data graphics and accessibility. Working at the intersection of both as The New York Times’ first Accessibility Visuals Editor. Based in San Francisco, California."
           }
         },
         {
@@ -122,7 +122,7 @@
         {
           "type": "IndexTable",
           "value": {
-            "title": "Sample Projects",
+            "title": "Prior Work",
             "items": [
               {
                 "text": "Alt Text at the NYT",
@@ -135,14 +135,14 @@
                 "meta": "Development, Design"
               },
               {
-                "text": "Visa Analytics Platform",
-                "href": "https://www.visa.com/en-us/products/visa-analytics-platform",
-                "meta": "Development"
-              },
-              {
                 "text": "Visa Destination Insights",
                 "href": "/projects/visa-destination-insights",
                 "meta": "Design, Research"
+              },
+              {
+                "text": "Visa Analytics Platform",
+                "href": "https://www.visa.com/en-us/products/visa-analytics-platform",
+                "meta": "Development"
               },
               {
                 "text": "Data viz and accessibility recommendations to the City of San Francisco",

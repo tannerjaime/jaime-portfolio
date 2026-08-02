@@ -45,19 +45,12 @@
   .index-section {
     margin: 0 auto;
     padding: 1rem 0;
-    font-family: "Mozilla Text", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1rem;
-    /* line-height: 1.25; */
     color: #333331;
     margin: 0;
   }
 
   h2 {
-    font-size: 1rem;
-    font-weight: 600;
+    /* font-family: "Inter", sans-serif; */
   }
 
   ul,
@@ -100,8 +93,9 @@
   .meta {
     flex: 0 0 auto;
     color: #888;
-    /* font-size: 0.85rem; */
     white-space: nowrap;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
   }
 
   .toggle {
@@ -112,6 +106,7 @@
     color: #111;
     cursor: pointer;
     font: inherit;
+    font-family: "Inter", sans-serif;
     font-size: 0.95rem;
     line-height: 1.4;
     text-decoration: underline;

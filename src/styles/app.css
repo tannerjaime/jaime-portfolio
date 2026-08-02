@@ -7,7 +7,7 @@
 /* colors defined in variables.css */
 :root {
 	/* font */
-	--font-sans: "Atlas Grotesk", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+	--font-sans: "Inter", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
 	--font-serif: "Tiempos Text", Iowan Old Style, Times New Roman, Times, serif;
 	--font-mono: Menlo, Consolas, Monaco, monospace;
 
@@ -19,7 +19,7 @@
 	--z-modal: 1000;
 
 	/* presets (used in reset.css) */
-	--font-body: var(--font-serif);
+	--font-body: var(--font-sans);
 	--font-form: var(--font-sans);
 
 	--radius-xs: 0.125rem;
@@ -63,31 +63,58 @@
 }
 
 h1 {
-	font-size: var(--48px, 48px);
+	font-family: "Mozilla Headline", sans-serif;
+	font-size: var(--18px, 18px);
+    font-optical-sizing: auto;
+    font-style: normal;
+	font-weight: 700;
+	line-height: 30px;
+	font-feature-settings: "dlig"
 }
 
 h2 {
-	font-size: var(--36px, 36px);
+	font-family: "Mozilla Text", sans-serif;
+	font-size: var(--17px, 17px);
+    font-optical-sizing: auto;
+    font-style: normal;
+	font-weight: 700;
+	line-height: 22.5px;
 }
 
 h3 {
-	font-size: var(--28px, 28px);
+	font-family: "Inter", sans-serif;
+	font-size: var(--16px, 16px);
 }
 
 h4 {
-	font-size: var(--24px, 24px);
+	font-family: "Inter", sans-serif;
+	font-size: var(--16px, 16px);
 }
 
 h5 {
-	font-size: var(--22px, 22px);
+	font-family: "Inter", sans-serif;
+	font-size: var(--16px, 16px);
 }
 
 h6 {
-	font-size: var(--20px, 20px);
+	font-family: "Inter", sans-serif;
+	font-size: var(--16px, 16px);
 }
 
 svg {
 	display: block;
 	width: 100%;
 	height: auto;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+	font-size: var(--16px, 16px);
+	line-height: 23px;
+}
+
+a, span {
+    font-family: "Inter", sans-serif;
+	font-size: var(--16px, 16px);
+	line-height: 24px;
 }
