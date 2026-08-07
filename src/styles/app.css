@@ -63,41 +63,52 @@
 }
 
 h1 {
-	font-family: "Mozilla Headline", sans-serif;
+	font-family: var(--font-sans);
+	font-size: var(--18px, 18px);
+	font-weight: 500; /* semi-bold */
+	letter-spacing: -0.02em;
+	color: #2C2621;
+	/* font-family: "Mozilla Headline", sans-serif;
 	font-size: var(--18px, 18px);
     font-optical-sizing: auto;
     font-style: normal;
 	font-weight: 700;
 	line-height: 30px;
-	font-feature-settings: "dlig"
+	font-feature-settings: "dlig" */
 }
 
 h2 {
-	font-family: "Mozilla Text", sans-serif;
+	font-family: var(--font-sans);
+	font-size: var(--12px, 12px);
+	font-weight: 600; /* semi-bold */
+	color: #7a746d;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	/* font-family: "Mozilla Text", sans-serif;
 	font-size: var(--17px, 17px);
     font-optical-sizing: auto;
     font-style: normal;
 	font-weight: 700;
-	line-height: 22.5px;
+	line-height: 22.5px; */
 }
 
 h3 {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font-sans);
 	font-size: var(--16px, 16px);
 }
 
 h4 {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font-sans);
 	font-size: var(--16px, 16px);
 }
 
 h5 {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font-sans);
 	font-size: var(--16px, 16px);
 }
 
 h6 {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font-sans);
 	font-size: var(--16px, 16px);
 }
 
@@ -108,13 +119,17 @@ svg {
 }
 
 p {
-    font-family: "Inter", sans-serif;
-	font-size: var(--16px, 16px);
-	line-height: 23px;
+    font-family: var(--font-sans);
+	font-size: var(--15px, 15px);
+	line-height: 20px;
+	color: #5f5951;
+	letter-spacing: 0.01em;
 }
 
 a, span {
-    font-family: "Inter", sans-serif;
-	font-size: var(--16px, 16px);
-	line-height: 24px;
+    font-family: var(--font-sans);
+	font-size: var(--15px, 15px);
+	line-height: 20px;
+	color: #5f5951;
+	letter-spacing: 0.01em;
 }

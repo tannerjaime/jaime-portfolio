@@ -16,20 +16,12 @@
         },
         {
           "type": "text",
-          "value": "In 2019, I served as the lead data experience designer for the creation of a new data platform for Visa Destination Insights. The analytics platform enables the tourism industry at both the private and government levels to analyze domestic and international spending patterns."
+          "value": "In 2019, I was the lead Data Experience Designer during the creation of a new data platform for Visa Destination Insights. The analytics platform enables the tourism industry at both the private and government levels to analyze domestic and international spending patterns."
         },
         {
           "type": "Image",
           "value": {
             "image": "/assets/project/VDI_homescreen_1.png",
-            "caption": "",
-            "alt": "this is alt"
-          }
-        },
-        {
-          "type": "Image",
-          "value": {
-            "image": "/assets/project/VDI_charts.avif",
             "caption": "",
             "alt": "this is alt"
           }
@@ -43,20 +35,12 @@
           "value": "I left Visa before the platform launched, and so a big thank you to David Zinsmeyer (who later worked on updating VDI using Visa’s latest design system, among other improvements) for sharing the screenshots below 🙏"
         },
         {
-          "type": "H2",
-          "value": "Generative research with existing clients"
-        },
-        {
-          "type": "text",
-          "value": "Before the current platform was developed, the product operated as a series of static data sheets. We learned quickly that while our biggest clients had the pipelines to handle this data, the majority felt that they were missing most of the insights and spent most of their time struggling to answer very specific questions from their stakeholders."
-        },
-        {
-          "type": "H2",
-          "value": "Rapid prototyping and feedback sessions"
-        },
-        {
-          "type": "text",
-          "value": "Our design researchers lead rapid prototyping sessions where we explored a variety of graphics and user flows. We discovered that clients frequently faced significant challenges with filtering data for particular audiences and time frames, and so adding persistent data filters on the page proved to be incredibly valuable. A dot plot mapping market segment spending over time (shown below) emerged as an especially compelling visualization, offering users a clear perspective on their data that had previously been unavailable to them. Presenting our users with quick prototypes really helped us to get a feel for our clients appetite and interest in the charts we used as well. Graphics that were insightful but still presentation friendly seemed to be most successful, rather than overly interactive tools."
+          "type": "Image",
+          "value": {
+            "image": "/assets/project/VDI_charts.avif",
+            "caption": "",
+            "alt": "this is alt"
+          }
         },
         {
           "type": "Image",
@@ -67,24 +51,12 @@
           }
         },
         {
-          "type": "H2",
-          "value": "Final designs and user research sessions"
-        },
-        {
-          "type": "text",
-          "value": "We developed a fully interactive prototype that was then used by our user research team to further test with new and existing clients.The feedback we gathered was directly integrated into the final product, which included the addition of a new user onboarding experience (shown below)."
-        },
-        {
           "type": "Image",
           "value": {
             "image": "/assets/project/VDI_onboarding.avif",
             "caption": "",
             "alt": "this is alt"
           }
-        },
-        {
-          "type": "text",
-          "value": "I am incredibly grateful for the opportunity to have partnered with the phenomenal design researchers at Visa’s Innovation Center. This project marked my first experience designing in such close, direct collaboration with product users, an approach that I believe truly elevated the final product."
         }
       ]
     }

@@ -10,8 +10,8 @@
   let ordered = $derived(props.ordered ?? false);
   let showAll = $state(false);
 
-  let visibleItems = $derived(showAll ? items : items.slice(0, 3));
-  let hasMore = $derived(items.length > 3);
+  let visibleItems = $derived(showAll ? items : items.slice(0, 4));
+  let hasMore = $derived(items.length > 4);
 </script>
 
 <section class="index-section">
@@ -36,7 +36,7 @@
 
   {#if hasMore}
     <button type="button" class="toggle" onclick={() => (showAll = !showAll)}>
-      {showAll ? 'Show less' : `[Show ${items.length - 3} more]`}
+      {showAll ? 'Show less' : `[Show ${items.length - 4} more]`}
     </button>
   {/if}
 </section>
@@ -44,13 +44,9 @@
 <style>
   .index-section {
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 1.25rem 0;
     color: #333331;
     margin: 0;
-  }
-
-  h2 {
-    /* font-family: "Inter", sans-serif; */
   }
 
   ul,
@@ -61,74 +57,126 @@
   }
 
   li {
+    --row-bleed: 0.35rem;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 1rem;
-    padding: 0.4rem 0;
-    /* border-bottom: 1px solid #eaeaea; */
+    position: relative;
+    margin: 0 calc(var(--row-bleed) * -1);
+    padding: 0.65rem var(--row-bleed);
+    border-radius: 0.375rem;
     font-size: 0.95rem;
     line-height: 1.4;
+  }
+
+  li + li::before,
+  li:last-child::after {
+    content: "";
+    position: absolute;
+    left: var(--row-bleed);
+    right: var(--row-bleed);
+    height: 1px;
+    background-color: #ecece8;
+  }
+
+  li + li::before {
+    top: 0;
+  }
+
+  li:last-child::after {
+    bottom: 0;
   }
 
   li a,
   li .text {
-    color: #111;
     text-decoration: none;
     min-width: 0;
+    transition: color 160ms ease;
   }
 
   li a {
     position: relative;
-    text-decoration: underline;
+    text-decoration: none;
     flex: 0 1 auto;
     align-self: flex-start;
-  }
-
-  li a:hover {
-    color: #F9F9F7;
-    background-color: #111;
+    font-weight: 500;
+    color: #2c2621
   }
 
   .meta {
     flex: 0 0 auto;
-    color: #888;
-    white-space: nowrap;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem;
+    /* color: #888; */
+    /* white-space: nowrap; */
+    /* transition: color 16ms ease; */
+    /* font-family: "Inter", sans-serif;
+    font-size: 1rem; */
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    li:has(a):hover {
+      background-color: #ececec;
+    }
   }
 
   .toggle {
-    margin-top: 0.5rem;
-    padding: 0;
+    --row-bleed: 0.35rem;
+    display: block;
+    width: calc(100% + (var(--row-bleed) * 2));
+    box-sizing: border-box;
+    margin: 0 calc(var(--row-bleed) * -1) 0;
     border: 0;
     background: none;
-    color: #111;
+    font-family: var(--font-sans);
+	  font-size: var(--15px, 15px);
+	  line-height: 20px;
+	  color: #2c2621;
+    font-weight: 500;
+	  letter-spacing: 0.01em;
+    padding: 0.65rem var(--row-bleed);
+    text-align: left;
+    border-radius: 0.375rem;
     cursor: pointer;
-    font: inherit;
-    font-family: "Inter", sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    text-decoration: underline;
+    /* line-height: 1.4; */
+    text-decoration: none;
   }
 
   @media (max-width: 760px) {
     .index-section {
-      padding: 0.75rem 0;
+      padding: 1.25rem 0;
     }
 
     li {
-      gap: 0.75rem;
-      padding: 0.35rem 0;
+      --row-bleed: 0.3rem;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0.1rem;
+      margin: 0 calc(var(--row-bleed) * -1);
+      padding: 0.55rem var(--row-bleed);
+    }
+
+    .meta {
+      white-space: normal;
     }
 
     .toggle {
-      margin-top: 0.35rem;
+      --row-bleed: 0.3rem;
+      margin-top: 0;
+      padding: 0.55rem var(--row-bleed);
     }
   }
 
-  .toggle:hover {
-    color: #F9F9F7;
-    background-color: #111;
+  @media (hover: hover) and (pointer: fine) {
+    .toggle:hover {
+      background-color: #ececec;
+    }
+  }
+
+  @media (hover: none) {
+    li:has(a:active),
+    .toggle:active {
+      background-color: #ececec;
+    }
   }
 </style>

@@ -38,13 +38,11 @@
   }
 
   h1 {
-    font-family: "Mozilla Text", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: var(--28px, 28px);
     font-weight: 600;
     line-height: 1.25;
-    color: #333331;
+    color: #2c2621;
     margin: 0 0 0.25rem;
   }
 

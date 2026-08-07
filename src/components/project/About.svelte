@@ -30,15 +30,9 @@
     width: 100%;
   }
 
-  h1 {
-    color: #333331;
-  }
-
   span {
     display: block;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem;
-    color: #333331;
+    /* color: #333331; */
     margin: 0;
   }
  
@@ -51,11 +45,6 @@
   @media (max-width: 640px) {
     .text-block {
       padding: 0 0 0.5rem;
-    }
- 
-    span {
-      font-size: 1.1rem;
-      /* line-height: 1.35; */
     }
   }
 </style>
