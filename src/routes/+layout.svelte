@@ -2,6 +2,7 @@
 	import "$styles/app.css";
 	import "$styles/fonts.css";
 	import Nav from "$components/Project/Nav.svelte";
+	import Footer from "$components/Footer.svelte";
 
 	let { children } = $props();
 </script>
@@ -10,6 +11,7 @@
 <main id="content">
 	{@render children?.()}
 </main>
+<Footer />
 
 <style>
 	main {

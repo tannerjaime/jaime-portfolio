@@ -23,9 +23,19 @@
     {#each visibleItems as item, i}
       <li>
         {#if item.href}
-          <a href={item.href}>{item.text}</a>
+          <a href={item.href}>
+            <span>{item.text}</span>
+            {#if item.wip}
+              <span class="wip-badge">WIP</span>
+            {/if}
+          </a>
         {:else}
-          <span class="text">{item.text}</span>
+          <span class="text">
+            <span>{item.text}</span>
+            {#if item.wip}
+              <span class="wip-badge">WIP</span>
+            {/if}
+          </span>
         {/if}
         {#if item.meta}
           <span class="meta">{item.meta}</span>
@@ -65,7 +75,6 @@
     position: relative;
     margin: 0 calc(var(--row-bleed) * -1);
     padding: 0.65rem var(--row-bleed);
-    border-radius: 0.375rem;
     font-size: 0.95rem;
     line-height: 1.4;
   }
@@ -90,9 +99,11 @@
 
   li a,
   li .text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
     text-decoration: none;
     min-width: 0;
-    transition: color 160ms ease;
   }
 
   li a {
@@ -106,16 +117,34 @@
 
   .meta {
     flex: 0 0 auto;
-    /* color: #888; */
-    /* white-space: nowrap; */
-    /* transition: color 16ms ease; */
-    /* font-family: "Inter", sans-serif;
-    font-size: 1rem; */
+  }
+
+  .wip-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d6d6d3;
+    background-color: transparent;
+    color: #2c2621;
+    border-radius: 0.25rem;
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.14rem 0.34rem;
+    white-space: nowrap;
   }
 
   @media (hover: hover) and (pointer: fine) {
     li:has(a):hover {
       background-color: #ececec;
+    }
+
+    li:has(a):hover::before,
+    li:has(a):hover::after,
+    li:has(a):hover + li::before {
+      background-color: transparent;
     }
   }
 
@@ -135,7 +164,7 @@
 	  letter-spacing: 0.01em;
     padding: 0.65rem var(--row-bleed);
     text-align: left;
-    border-radius: 0.375rem;
+    border-radius: 0;
     cursor: pointer;
     /* line-height: 1.4; */
     text-decoration: none;
@@ -171,12 +200,22 @@
     .toggle:hover {
       background-color: #ececec;
     }
+
+    .index-section:has(.toggle:hover) li:last-child::after {
+      background-color: transparent;
+    }
   }
 
   @media (hover: none) {
     li:has(a:active),
     .toggle:active {
       background-color: #ececec;
+    }
+
+    li:has(a:active)::before,
+    li:has(a:active)::after,
+    li:has(a:active) + li::before {
+      background-color: transparent;
     }
   }
 </style>
