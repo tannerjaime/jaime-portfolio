@@ -21,7 +21,9 @@
         {#if item?.type === 'ProjectHed'}
           <ProjectHed projectHed={item.value} />
         {:else if item?.type === 'Image'}
-          <Image allProps={item.value} />
+          <div class="image-breakout">
+            <Image allProps={item.value} />
+          </div>
         {:else}
           <svelte:element this={item?.type==='text' ? 'p' : item?.type || 'p'}>
             {item?.value ?? ''}
@@ -31,3 +33,17 @@
     {/if}
   </section>
 {/each}
+
+<style>
+  .image-breakout {
+    width: 100%;
+  }
+
+  @media (min-width: 1101px) {
+    .image-breakout {
+      width: min(calc(100% + 20rem), calc(100vw - 4rem));
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+</style>

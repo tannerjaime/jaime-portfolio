@@ -28,6 +28,11 @@
 
   section {
     width: 100%;
+    padding: 0 0 3rem;
+  }
+
+  h1{
+    padding: 0 0 1.2rem;
   }
 
   span {
@@ -37,12 +42,20 @@
   }
  
   @media (max-width: 900px) {
+    section {
+      padding: 0 0 1.5rem;
+    }
+
     .text-block {
       padding: 0 0 0.75rem;
     }
   }
  
   @media (max-width: 640px) {
+    section {
+      padding: 0 0 1rem;
+    }
+
     .text-block {
       padding: 0 0 0.5rem;
     }
