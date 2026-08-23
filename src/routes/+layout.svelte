@@ -15,24 +15,8 @@
 
 <style>
 	main {
-		margin: 1rem 18rem;
-	}
-
-	@media (max-width: 1400px) {
-		main {
-			margin: 1rem 17rem;
-		}
-	}
-
-	@media (max-width: 1100px) {
-		main {
-			margin: 1rem 4rem;
-		}
-	}
-
-	@media (max-width: 760px) {
-		main {
-			margin: 1rem 1.5rem;
-		}
+		width: min(calc(100% - (var(--page-padding) * 2)), var(--page-width));
+		margin: 1rem auto;
+		box-sizing: border-box;
 	}
 </style>

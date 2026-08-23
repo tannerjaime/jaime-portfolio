@@ -21,11 +21,13 @@
 
 <style>
 	footer {
-		margin: 0 18rem;
+		width: min(calc(100% - (var(--page-padding) * 2)), var(--page-width));
+		margin: 0 auto;
 		padding: 1rem 0 3rem;
+		box-sizing: border-box;
 		span, a {
 			font-size: var(--14px, 14px);
-			color: #7a746d;
+			color: var(--color-body);
 		}
 	}
 
@@ -56,27 +58,4 @@
 		text-decoration: underline;
 	}
 
-	@media (max-width: 1400px) {
-		footer {
-			margin: 0 17rem;
-		}
-	}
-
-	@media (max-width: 1100px) {
-		footer {
-			margin: 0 4rem;
-			padding: 0 0 0.75rem;
-		}
-
-		.follow {
-			gap: 0.75rem;
-		}
-	}
-
-	@media (max-width: 760px) {
-		footer {
-			margin: 0 1.5rem;
-			padding: 0 0 0.5rem;
-		}
-	}
 </style>

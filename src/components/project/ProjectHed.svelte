@@ -37,13 +37,14 @@
     width: 100%;
   }
 
+
   h1 {
-    font-family: "Inter", sans-serif;
-    font-size: var(--28px, 28px);
-    font-weight: 600;
+    font-family: "Cooper", sans-serif;
+    font-size: var(--34px, 34px);
+    font-weight: 800;
     line-height: 1.25;
-    color: #2c2621;
-    margin: 0 0 0.25rem;
+    color: #333;
+    margin: 0 0 3rem;
   }
 
   .subtitle {

@@ -55,8 +55,14 @@
   .index-section {
     margin: 0 auto;
     padding: 1.25rem 0;
-    color: #333331;
     margin: 0;
+
+    span {
+      font-family: "Inter", sans-serif;
+      font-size: var(--15px, 15px);
+      line-height: 20px;
+      color: var(--color-body);
+    }
   }
 
   ul,
@@ -112,7 +118,7 @@
     flex: 0 1 auto;
     align-self: flex-start;
     font-weight: 500;
-    color: #2c2621
+    color: var(--color-link);
   }
 
   .meta {
@@ -137,14 +143,42 @@
   }
 
   @media (hover: hover) and (pointer: fine) {
+    li:nth-child(4n + 1):has(a):hover {
+      background-color: #3B6FE0;
+      color: #ffffff;
+      border-radius: 0.5rem;
+    }
+
+    li:nth-child(4n + 2):has(a):hover {
+      background-color: #C25A36;
+      color: #ffffff;
+      border-radius: 0.5rem;
+    }
+
+    li:nth-child(4n + 3):has(a):hover {
+      background-color: #3F8C6E;
+      color: #ffffff;
+      border-radius: 0.5rem;
+    }
+
+    li:nth-child(4n + 4):has(a):hover {
+      background-color: #7B4FA0;
+      color: #ffffff;
+      border-radius: 0.5rem;
+    }
+
     li:has(a):hover {
-      background-color: #ececec;
+      background-color: transparent;
     }
 
     li:has(a):hover::before,
     li:has(a):hover::after,
     li:has(a):hover + li::before {
       background-color: transparent;
+    }
+
+    li:has(a):hover :is(a, span) {
+      color: #ffffff;
     }
   }
 
@@ -159,7 +193,7 @@
     font-family: var(--font-sans);
 	  font-size: var(--15px, 15px);
 	  line-height: 20px;
-	  color: #2c2621;
+	  color: var(--color-link);
     font-weight: 500;
 	  letter-spacing: 0.01em;
     padding: 0.65rem var(--row-bleed);

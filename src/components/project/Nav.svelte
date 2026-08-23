@@ -21,19 +21,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 2.5rem 18rem 4rem;
-  }
-
-  @media (max-width: 1400px) {
-    nav {
-      margin: 1rem 17rem 2rem;
-    }
-  }
-
-  @media (max-width: 1100px) {
-    nav {
-      margin: 1rem 4rem 2rem;
-    }
+    gap: clamp(1rem, 2vw, 2.5rem);
+    width: min(calc(100% - (var(--page-padding) * 2)), var(--page-width));
+    margin: 2.5rem auto 4rem;
+    box-sizing: border-box;
   }
 
   .logo {
@@ -46,14 +37,15 @@
 
   .logo img {
     display: block;
-    height: 5rem;
+    height: clamp(3rem, 6vw, 5rem);
     width: auto;
     object-fit: contain;
   }
 
   ul {
     display: flex;
-    gap: 2.5rem;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2vw, 2.5rem);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -64,7 +56,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 1rem;
+    font-size: clamp(0.75rem, 1vw, 1rem);
     line-height: 1.25;
     text-transform: uppercase;
     color: #333331;
@@ -76,17 +68,4 @@
     opacity: 0.6;
   }
 
-  @media (max-width: 760px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-      margin: 1rem 1.5rem 2rem;
-    }
-
-    ul {
-      gap: 1.25rem;
-      flex-wrap: wrap;
-    }
-  }
 </style>
